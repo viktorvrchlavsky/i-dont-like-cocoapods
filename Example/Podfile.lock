@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Kingfisher (7.1.2)
+  - KittyImages (0.0.1):
+    - Alamofire (= 5.5.0)
+
+DEPENDENCIES:
+  - Kingfisher (= 7.1.2)
+  - KittyImages (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+
+EXTERNAL SOURCES:
+  KittyImages:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  KittyImages: 43e87d6d99e3c60fe58fa82352a6a8e289562da4
+
+PODFILE CHECKSUM: 728ef5064f8ce03e17083a0897adcc3957f4cc5a
+
+COCOAPODS: 1.11.2

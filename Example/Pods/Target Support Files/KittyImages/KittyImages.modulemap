@@ -1,0 +1,6 @@
+framework module KittyImages {
+  umbrella header "KittyImages-umbrella.h"
+
+  export *
+  module * { export * }
+}

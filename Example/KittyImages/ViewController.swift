@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import KittyImages
+import Kingfisher
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var imageView: UIImageView!
+
+    private let provider = PussyProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadPussyImage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func loadPussyImage() {
+        Task {
+            let imageURL = try await provider.getRandomPussyPictureURL()
+            imageView.kf.setImage(with: imageURL)
+        }
     }
 
+    @IBAction private func reloadButtonPressed(_ sender: Any) {
+        loadPussyImage()
+    }
 }
 
